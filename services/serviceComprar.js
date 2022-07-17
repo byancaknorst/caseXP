@@ -14,7 +14,7 @@ const serviceComprar = async ( codCliente, codAtivo, qtdeAtivo )  => {
     throw {code: 400, message: 'Quantidade indisponível'};
   };
   const compra = await modelComprar.comprar(codCliente, codAtivo, qtdeAtivo);
-  console.log('compra', compra);
+  // console.log('compra', compra);
   const qtdDecremento = compra.quantidade;
   const idAcao = compra.idAcao;
   await modelComprar.decrementoBD(qtdDecremento, idAcao);
