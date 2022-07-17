@@ -6,6 +6,6 @@ const { validarCodCliente, codAtivo, qtdeAtivo } = require('../middlewares/valid
 const controllerInvestimentosVender = require('../controllers/controllerInvestimentosVender');
 
 rotaInvestimentos.post('/comprar', validarCodCliente, codAtivo, qtdeAtivo, controllerInvestimentosComprar.comprarAtivo);
-rotaInvestimentos.post('/vender', controllerInvestimentosVender.venderAtivo);
+rotaInvestimentos.post('/vender', validarCodCliente, codAtivo, qtdeAtivo, controllerInvestimentosVender.venderAtivo);
 
 module.exports = rotaInvestimentos;
