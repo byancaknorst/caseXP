@@ -17,8 +17,8 @@ const consultaPorCliente = async (codCliente) => {
   return objRetorno;
 }
 
-const consultaPorAtivo = async (codAtivo) => {
-  const resConsulta = await modelAtivos.consultaAtivo(codAtivo);
+const consultaPorAtivo = async (ticker) => {
+  const resConsulta = await modelAtivos.consultaAtivo(ticker);
   return resConsulta;
 };
 
