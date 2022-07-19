@@ -1,2 +1,2 @@
 # caseXP
-PR para desenvolvimento do desafio técnico da XP
+Repositório para desenvolvimento back end do desafio técnico da XP
