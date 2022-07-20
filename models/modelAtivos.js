@@ -16,7 +16,6 @@ const consultaAtivo = async (ticker) => {
   const query = `SELECT a.id as codAtivo, a.quantidade as qtdeAtivo, a.valor as valor
   FROM acao as a WHERE ticker = ?`;
   const [result] = await connection.query(query, [ticker]);
-  console.log(result);
   return result;
 };
 

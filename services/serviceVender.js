@@ -13,7 +13,7 @@ const serviceVender = async ( codCliente, codAtivo, qtdeAtivo )  => {
     throw {code: 400, message: 'Quantidade indisponível'};
   }
   const vender = await modelVender.vender(codCliente, codAtivo, qtdeAtivo);
-  await modelVender.incrementoBD(qtdeAtivo, codAtivo);
+  await modelVender.decrementoDB(qtdeAtivo, codAtivo);
   return vender;
 }
 

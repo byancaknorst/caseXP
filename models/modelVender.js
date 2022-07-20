@@ -28,4 +28,9 @@ const incrementoBD = async (qtdeAtivo, codAtivo) => {
   // console.log(incre);
 }
 
-module.exports = { verificarQuantidadeDisponivel, vender, incrementoBD };
+const decrementoDB = async (qtdeAtivo, codAtivo) => {
+  const query = 'UPDATE acao SET quantidade = quantidade - ? WHERE id = ?';
+  await connection.execute(query, [qtdeAtivo, codAtivo]);
+}
+
+module.exports = { verificarQuantidadeDisponivel, vender, incrementoBD, decrementoDB };
