@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./tests/unity/*.test.js",
+    "test": "mocha unity/**/*.test.js",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "test:nyc": "nyc --all mocha ./tests/unity/*.test.js"
+    "test:nyc": "nyc --all --include models --include services --include controllers mocha unity/**/*.test.js"
   },
   "keywords": [],
   "author": "",

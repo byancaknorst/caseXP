@@ -9,9 +9,7 @@ const consultarCliente = async (request, response) => {
 const consultarAtivo = async (request, response) => {
   const { ticker} = request.body;
   const retorno = await serviceAtivos.consultaPorAtivo(ticker);
-  // const retornoTicker = `${ticker}: {
-  //   ${retorno}: ${retorno}`
-  // }
+  console.log(retorno);
   response.status(200).json(retorno);
 };
 
