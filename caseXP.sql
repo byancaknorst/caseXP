@@ -37,20 +37,22 @@ CREATE TABLE acao_usuario (
 SET SQL_SAFE_UPDATES = 0;
 
 
-insert into acao (id, ticker, quantidade, valor) values (1, 'ITSA4', 1, 78.64);
-insert into acao (id, ticker, quantidade, valor) values (2, 'AZUL4', 2, 40.64);
-insert into acao (id, ticker, quantidade, valor) values (3, 'PETR4', 3, 9.23);
-insert into acao (id, ticker, quantidade, valor) values (4, 'VALE4', 4, 85.21);
-insert into acao (id, ticker, quantidade, valor) values (5, 'WEGE3', 5, 44.02);
-insert into acao (id, ticker, quantidade, valor) values (6, 'ABEV3', 6, 43.52);
-insert into acao (id, ticker, quantidade, valor) values (7, 'XPBR3', 7, 87.39);
-insert into acao (id, ticker, quantidade, valor) values (8, 'ENBR4', 8, 20.23);
-insert into acao (id, ticker, quantidade, valor) values (9, 'LEVE3', 9, 29.62);
-insert into acao (id, ticker, quantidade, valor) values (10, 'B3SA3', 10, 41.71);
+insert into acao (id, ticker, quantidade, valor) values (1, 'ITSA4', 100, 78.64);
+insert into acao (id, ticker, quantidade, valor) values (2, 'AZUL4', 200, 40.64);
+insert into acao (id, ticker, quantidade, valor) values (3, 'PETR4', 300, 9.23);
+insert into acao (id, ticker, quantidade, valor) values (4, 'VALE4', 400, 85.21);
+insert into acao (id, ticker, quantidade, valor) values (5, 'WEGE3', 500, 44.02);
+insert into acao (id, ticker, quantidade, valor) values (6, 'ABEV3', 600, 43.52);
+insert into acao (id, ticker, quantidade, valor) values (7, 'XPBR3', 700, 87.39);
+insert into acao (id, ticker, quantidade, valor) values (8, 'ENBR4', 800, 20.23);
+insert into acao (id, ticker, quantidade, valor) values (9, 'LEVE3', 900, 29.62);
+insert into acao (id, ticker, quantidade, valor) values (10, 'B3SA3', 100, 41.71);
 
 insert into usuario (id, nomeUsuario, email, password, saldo) values (1, 'XPTO', 'kslingsby0@chicagotribune.com', '4dVuWbuNF', 96.38);
 insert into usuario (id, nomeUsuario, email, password, saldo) values (2, 'BYAK', 'bmcgrady1@usnews.com', 'jrO7Od2fH', 57.52);
 insert into usuario (id, nomeUsuario, email, password, saldo) values (3, 'TRYBE', 'bfilipczak2@auda.org.au', 'Lg09yYsHaEEa', 57.13);
 
-insert into acao_usuario (idAcao, idUsuario, quantidade, flagCompraVenda) values (1, 2, 5, true)
-insert into acao_usuario (idAcao, idUsuario, quantidade, flagCompraVenda) values (2, 2, 5, false)
+insert into acao_usuario (idAcao, idUsuario, quantidade, flagCompraVenda) values (1, 2, 5, true);
+insert into acao_usuario (idAcao, idUsuario, quantidade, flagCompraVenda) values (2, 2, 5, false);
+
+
