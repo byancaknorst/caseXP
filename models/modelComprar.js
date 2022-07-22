@@ -14,13 +14,13 @@ const comprar = async (codCliente, codAtivo, qtdeAtivo) => {
     quantidade: qtdeAtivo,
     flagCompraVenda: 1
   }
+  console.log('INFOS', informaçõesInseridas);
   return informaçõesInseridas;
 }
 
 const decrementoBD = async (qtdeDecremento, idAcao) => {
   const query = 'UPDATE acao SET quantidade = quantidade - ? WHERE id = ?';
-  const [decre] = await connection.execute(query, [qtdeDecremento, idAcao]);
-  console.log(decre);
+  await connection.execute(query, [qtdeDecremento, idAcao]);
 }
 
 module.exports = { acoesDisponiveis, comprar, decrementoBD };
