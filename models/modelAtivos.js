@@ -8,16 +8,14 @@ const consultaCliente = async (codCliente) => {
   FROM heroku_e660f011b6edc5f.acao_usuario as ac 
   INNER JOIN heroku_e660f011b6edc5f.acao as a ON a.id = ac.idAcao
   WHERE ac.idUsuario = ?`;
-  const [result] = await connection.query(query, [codCliente]);
-  console.log('resultadoooooooooo', result);
-  console.log('resultado', result[0]);
-  return result;
+  const result = await connection.execute(query, [codCliente]);
+  return result[0];
 }
 
 const consultaAtivo = async (ticker) => {
   const query = `SELECT a.id as codAtivo, a.quantidade as qtdeAtivo, a.valor as valor
   FROM acao as a WHERE ticker = ?`;
-  const [result] = await connection.query(query, [ticker]);
+  const [result] = await connection.execute(query, [ticker]);
   return result;
 };
 

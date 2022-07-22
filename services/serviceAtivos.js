@@ -19,6 +19,7 @@ const consultaPorCliente = async (codCliente) => {
 
 const consultaPorAtivo = async (ticker) => {
   const resConsulta = await modelAtivos.consultaAtivo(ticker);
+  console.log('KJDHSAKJDHSAKJHDKASJH', resConsulta);
   return resConsulta;
 };
 
