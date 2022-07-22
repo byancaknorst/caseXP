@@ -4,6 +4,7 @@ const modelComprar = require('../models/modelComprar');
 const serviceComprar = async ( codCliente, codAtivo, qtdeAtivo )  => {
   const disponiveis = await modelComprar.acoesDisponiveis();
   const ativo = disponiveis.find(ativo => ativo.id === codAtivo);
+  console.log(ativo);
   if (!ativo) {
     console.log('Ativo não encontrado');
     throw {code: 404, message: 'Ativo não encontrado'};
