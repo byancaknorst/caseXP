@@ -1,5 +1,6 @@
 const sinon = require("sinon");
-const { expect } = require("chai");
+const chai = require("chai");
+const { expect } = chai;
 const connection = require("../../db/index"); 
 const modelComprar = require("../../models/modelComprar");
 
@@ -44,7 +45,8 @@ describe('Testando model de compra', () => {
     });
     it('Testa se a função decremento é executada', async () => {
       await modelComprar.decrementoBD(1, 10);
-      expect(modelComprar.decrementoBD).to.have.been.called.once();
+      expect(modelComprar.decrementoBD).calledOnceWith(1, 10);
+      expect(modelComprar.decrementoBD).to.have.been.calledWith(1, 10);
     });
   });
 });

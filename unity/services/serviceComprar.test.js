@@ -3,7 +3,7 @@ const { expect } = require('chai');
 const serviceComprar = require('../../services/serviceComprar');
 const modelComprar = require('../../models/modelComprar');
 
-const retornoConsultaAtivo = [
+const retornoCompraAtivo = [
 	{
     "idAcao": 10,
     "idUsuario": 2,
@@ -14,13 +14,11 @@ const retornoConsultaAtivo = [
 
 const retornoDisponiveis = [{ id: 10, ticker: 'B3SA3', quantidade: 21, valor: '41.71' }];
 
-const retornoConsultaConta = "O saldo do/a cliente BYAK é de R$ 388.89";
-
 describe("Testando o service de comprar", () => {
   describe("Testando a consulta por cliente", () => {
     beforeEach(async () => {
       sinon.stub(modelComprar, "acoesDisponiveis").resolves(retornoDisponiveis)
-      sinon.stub(modelComprar, "comprar").resolves(retornoConsultaConta);
+      sinon.stub(modelComprar, "comprar").resolves(retornoCompraAtivo);
       sinon.stub(modelComprar, "decrementoBD").resolves();
     });
     afterEach(async () => {
@@ -30,7 +28,7 @@ describe("Testando o service de comprar", () => {
     });
     it('Deve retornar as informações relacionadas a compra de ativos que o usuario fez', async() => {
       const resultado = await serviceComprar.serviceComprar(2, 10, 2);
-      expect(resultado).to.be.eql(retornoConsultaConta);
+      expect(resultado).to.be.eql(retornoCompraAtivo);
     });
   });
 });
