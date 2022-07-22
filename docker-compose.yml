@@ -6,7 +6,7 @@ services:
     # Imagem base do container
     image: node:16
     # Nome do container para facilitar execução
-    container_name: caseXP
+    container_name: CaseXP
     # Mesmo que `docker run -t`
     tty: true
     # Mesmo que `docker run -i`
@@ -33,7 +33,7 @@ services:
       - 3001:3001
     # Configura as variáveis de ambiente dentro do container
     environment:
-      MYSQL_NAME: caseXP
+      MYSQL_NAME: CaseXP
       MYSQL_USER: root
       MYSQL_PASSWORD: password
       MYSQL_HOST: db # Nome do service logo abaixo
@@ -41,7 +41,7 @@ services:
 
   # Serviço que irá rodar o banco de dados
   db:
-    container_name: caseXP_db
+    container_name: CaseXP_db
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: 'password'
