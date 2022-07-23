@@ -5,8 +5,8 @@ const consultaCliente = async (codCliente) => {
   ac.idAcao as codAtivo,
   ac.quantidade as qtdeAtivo,
   a.valor as valor
-  FROM heroku_e660f011b6edc5f.acao_usuario as ac 
-  INNER JOIN heroku_e660f011b6edc5f.acao as a ON a.id = ac.idAcao
+  FROM acao_usuario as ac 
+  INNER JOIN acao as a ON a.id = ac.idAcao
   WHERE ac.idUsuario = ?`;
   const result = await connection.execute(query, [codCliente]);
   return result[0];
