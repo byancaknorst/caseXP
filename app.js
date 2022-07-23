@@ -1,4 +1,7 @@
 const express = require('express');
+const swaggerUi = require('swagger-ui-express');
+const swaggerJSDoc = require('swagger-jsdoc');
+const swaggerConfig = require('./swagger.config.js');
 
 const app = express();
 require('express-async-errors');
@@ -6,6 +9,9 @@ const { errMid } = require('./middlewares/error');
 const indexRotas = require('./routers/index');
 
 app.use(express.json());
+
+const swaggerDoc = swaggerJSDoc(swaggerConfig);
+app.use("/documentacaoAPI", swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 app.get('/', (_request, response) => {
   response.send();
