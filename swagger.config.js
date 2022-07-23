@@ -9,6 +9,10 @@ const swaggerConfig = {
     servers: [{
       url: "http://localhost:3001",
       description: "Servidor local"
+    },
+    {
+      url: "https://case-xp-backend.herokuapp.com/",
+      description: "Servidor Heroku"
     }]
   },
   apis: ["./routers/*.js" ],
