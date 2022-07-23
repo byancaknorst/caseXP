@@ -102,6 +102,11 @@ Rode a aplicação
 ```bash
 npm run dev
 ```
+Caso deseje parar o container
+
+```bash
+docker-compose down
+```
 
 ---
 
