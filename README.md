@@ -17,8 +17,11 @@
 
 Para essa aplicação utilizei um banco de dados relacional, o MySql. Tentei fazer a estrutura mais simples possivel para que ficasse leve, mas utilizei querys para as buscas onde pude obter todas as informações necessárias para retornar o que era solicitado. O banco de dados consiste em uma tabela com informações do usuario, outra com informações dos ativos disponiveis e uma intermediaria dessas duas.
 
+<img src="bancoDeDados.png" alt="Diagrama do banco de dados" />
 
+A arquitetura da aplicação foi feita com base no modelo MSC, onde temos 3 camadas que são Model, Service e Controller. 
 
+Tomei a liberdade de mudar alguns retornos para string, devolvendo ao usuário uma frase contendo as informações que precisa e facilitando o entendimento.
 
 ---
 
@@ -35,6 +38,8 @@ A aplicação está disponivel através desse [link](https://case-xp-backend.her
 ---
 
 ## Primeiros passos
+
+Será necessário que a porta 3001 esteja disponível para a aplicação e o MySQL usará a porta 3306.
 
 Faça o clone do repositório utilizando o comando abaixo
 
