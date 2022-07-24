@@ -15,7 +15,7 @@
 
 ## Explicação do projeto
 
-Para essa aplicação utilizei um banco de dados relacional, o MySql. Tentei fazer a estrutura mais simples possivel para que ficasse leve, mas utilizei querys para as buscas onde pude obter todas as informações necessárias para retornar o que era solicitado. O banco de dados consiste em uma tabela com informações do usuario, outra com informações dos ativos disponiveis e uma intermediaria dessas duas.
+Para essa aplicação utilizei um banco de dados relacional, o MySql. Tentei fazer a estrutura mais simples possivel para que ficasse leve, e utilizei querys para as buscas onde pude obter todas as informações necessárias para retornar o que era solicitado. O banco de dados consiste em uma tabela com informações do usuario, outra com informações dos ativos disponiveis e uma intermediaria dessas duas.
 
 <img src="bancoDeDados.png" alt="Diagrama do banco de dados" />
 
