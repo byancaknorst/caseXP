@@ -3,12 +3,22 @@
 <p align="center">Esse repositório foi criado para o desenvolvimento do back end do desafio técnico para aplicação em uma vaga na XP Inc. Para o desenvolvimento deste aplicativo, foi usado Git, Node, Express, JavaScript, Eslint, Docker compose, Mocha e Chai. </p>
 
 <p align="center">
+  <a href="#Explicação do projeto">Explicação do projeto</a> •
   <a href="#Swagger">Swagger</a> •
   <a href="#Heroku">Heroku</a> •
   <a href="#Primeiros passos">Primeiros passos</a> •
   <a href="#Docker-Compose">Docker-Compose</a> •
   <a href="#Autora">Autora</a> 
 </p>
+
+---
+
+## Explicação do projeto
+
+Para essa aplicação utilizei um banco de dados relacional, o MySql. Tentei fazer a estrutura mais simples possivel para que ficasse leve, mas utilizei querys para as buscas onde pude obter todas as informações necessárias para retornar o que era solicitado. O banco de dados consiste em uma tabela com informações do usuario, outra com informações dos ativos disponiveis e uma intermediaria dessas duas.
+
+
+
 
 ---
 
@@ -113,4 +123,3 @@ docker-compose down
 ## Autora
 
 - [@byancaknorst](https://www.github.com/byancaknorst)
-=======
